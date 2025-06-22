@@ -1,3 +1,5 @@
+# Just added a comment to trigger cron registration
+
 name: Auto Extend Lemehost
 
 on:
