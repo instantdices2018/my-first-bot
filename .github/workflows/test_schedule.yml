@@ -1,0 +1,11 @@
+name: Test Schedule
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'  # Every 15 minutes
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo '✅ Scheduled workflow triggered!'
