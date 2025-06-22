@@ -1,3 +1,7 @@
+from datetime import datetime
+print("⏰ Cron triggered at UTC", datetime.utcnow())
+
+
 import os
 import requests
 from datetime import datetime
