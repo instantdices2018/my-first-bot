@@ -1,0 +1,30 @@
+name: Auto Extend Lemehost
+
+on:
+  schedule:
+    - cron: "*/29 * * * *"  # every 29 minutes
+  workflow_dispatch:       # allows manual runs
+
+jobs:
+  extend:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run extender
+        env:
+          LEME_ADVANCED_FRONTEND: ${{ secrets.LEME_ADVANCED_FRONTEND }}
+          LEME_IDENTITY_FRONTEND: ${{ secrets._IDENTITY_FRONTEND }}
+          LEME_CSRF: ${{ secrets.LEME_CSRF }}
+          LEME_CSRF_TOKEN: ${{ secrets.LEME_CSRF_TOKEN }}
+        run: python extend.py
