@@ -4,7 +4,8 @@ name: Auto Extend Lemehost
 
 on:
   schedule:
-    - cron: "*/29 * * * *"  # every 29 minutes
+   - cron: "*/15 * * * *"
+
   workflow_dispatch:       # allows manual runs
 
 jobs:
