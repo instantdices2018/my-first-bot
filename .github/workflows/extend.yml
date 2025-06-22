@@ -4,9 +4,11 @@ name: Auto Extend Lemehost
 
 on:
   schedule:
-   - cron: "*/15 * * * *"
-
-  workflow_dispatch:       # allows manual runs
+    - cron: '*/15 * * * *'  # Runs every 15 minutes
+  workflow_dispatch:        # Optional: allows manual runs from GitHub UI
+  push:                     # Optional: runs when you push changes to main
+    branches:
+      - main       # allows manual runs
 
 jobs:
   extend:
