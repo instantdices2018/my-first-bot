@@ -3,9 +3,10 @@
 name: Auto Extend Lemehost
 # Force re-registration
 
+
 on:
   schedule:
-    - cron: '*/15 * * * *'  # Runs every 15 minutes
+    - cron: '*/10 * * * *'  # runs every 10 minutes  
   workflow_dispatch:        # Optional: allows manual runs from GitHub UI
   push:                     # Optional: runs when you push changes to main
     branches:
@@ -34,3 +35,4 @@ jobs:
           LEME_CSRF: ${{ secrets.LEME_CSRF }}
           LEME_CSRF_TOKEN: ${{ secrets.LEME_CSRF_TOKEN }}
         run: python extend.py
+        
