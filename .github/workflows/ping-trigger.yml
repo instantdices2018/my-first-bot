@@ -1,5 +1,5 @@
 name: Push Trigger Every 10 Minutes
-# push
+# push2
 on:
   schedule:
     - cron: '*/5 * * * *'  # runs every 10 minutes
