@@ -3,7 +3,7 @@
 name: Auto Extend Lemehost
 # Force re-registration
 # Peolpla
-# gtr
+# gtr2
 
 on:
   schedule:
