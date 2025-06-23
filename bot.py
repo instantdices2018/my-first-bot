@@ -13,6 +13,7 @@ sys.stdout.reconfigure(line_buffering=True)
 print("🚀 Bot started", flush=True)
 
 # Run every 20 minutes forevers
+# push
 while True:
     chrome_options = Options()
     
